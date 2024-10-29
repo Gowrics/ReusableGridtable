@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FormPage from "./pages/Registration";
+import HomePage from "./pages/Home";
+import NavBar from "./component/NavBar";
+import FormPage1 from "./pages/Login";
+import RegistrationForm from "./pages/Formregister";
+import FormUse from "./pages/Formlogin";
+import UsersTable from "./pages/UsersTable";
+import SideBar from "./component/SideBar";
+import NavBar1 from "./component/NavBar1";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar1/>  
+      <SideBar/>
+      <Routes>
+      <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<FormPage />} />
+        <Route path="/login" element={< FormPage1/>} />
+        <Route path="/table" element={< UsersTable/>} />
+        </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+{/*
+        <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<FormPage />} />--right one
+        <Route path="/login" element={< FormPage1/>} />
+  
+  
+ <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<RegistrationForm />} />
+        <Route path="/login" element={< FormUse/>} />  </Routes>
+
+        */}

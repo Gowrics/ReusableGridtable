@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ParentPropsEx from './ParentPropsEx';
+import PropsEx2 from './component/PropsEx2';
+import ParentStateEx from './ParentStateEx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+       {/*<ParentStateEx/> */}  <App/>
   </React.StrictMode>
 );
 
