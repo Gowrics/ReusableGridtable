@@ -13,8 +13,7 @@ import NavBar1 from "./component/NavBar1";
 const App = () => {
   return (
     <Router>
-      <NavBar1/>  
-      <SideBar/>
+      <NavBar/>  
       <Routes>
       <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<FormPage />} />
